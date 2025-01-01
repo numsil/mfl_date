@@ -16,138 +16,107 @@
         body {
             background-color: #ffffff;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.4;
+            margin: 20px;
         }
 
         .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 0 24px;
+            max-width: 540px;
+            margin: 0 auto;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 24px;
         }
 
         .logo {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
             color: #1C7D6F;
-            letter-spacing: -1px;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .subtitle {
             font-size: 14px;
             color: #666;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .card {
             border: 1px solid rgba(28, 125, 111, 0.1);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 16px;
-            transition: all 0.2s ease;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
         }
 
         .card:hover {
             border-color: rgba(28, 125, 111, 0.2);
-            box-shadow: 0 4px 12px rgba(28, 125, 111, 0.05);
         }
 
-        .card-title {
+        .section-title {
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 600;
             color: #1C7D6F;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card-title::before {
-            content: '';
-            display: block;
-            width: 3px;
-            height: 3px;
-            background-color: #1C7D6F;
-            border-radius: 50%;
+            margin-bottom: 8px;
         }
 
         .content {
-            font-size: 15px;
+            font-size: 14px;
             color: #444;
-            line-height: 1.8;
+        }
+
+        .info-item {
+            margin-bottom: 4px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .prize-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .prize-list {
+            margin-bottom: 4px;
         }
 
         .sub-text {
             font-size: 13px;
             color: #888;
-            margin-top: 8px;
+            margin-top: 4px;
         }
 
-        .prize-list {
-            display: grid;
-            gap: 12px;
+        .notice-list p {
+            margin-bottom: 4px;
         }
 
-        .notice-list {
-            display: grid;
-            gap: 12px;
-        }
-
-        .notice-list li {
-            position: relative;
-            padding-left: 12px;
-            line-height: 1.6;
-        }
-
-        .notice-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #1C7D6F;
+        .notice-list p:last-child {
+            margin-bottom: 0;
         }
 
         .contact {
             text-align: center;
-            margin-top: 40px;
-            padding: 32px;
+            padding: 16px;
             border: 1px solid rgba(28, 125, 111, 0.1);
-            border-radius: 16px;
-        }
-
-        .contact:hover {
-            border-color: rgba(28, 125, 111, 0.2);
-            box-shadow: 0 4px 12px rgba(28, 125, 111, 0.05);
-        }
-
-        .contact-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #1C7D6F;
-            margin-bottom: 12px;
+            border-radius: 12px;
+            margin-top: 12px;
         }
 
         .phone {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             color: #1C7D6F;
+            margin-top: 4px;
         }
 
         @media (max-width: 480px) {
-            .container {
-                margin: 24px auto;
-            }
-            
-            .logo {
-                font-size: 40px;
-            }
-            
-            .card {
-                padding: 20px;
+            .prize-section {
+                grid-template-columns: 1fr;
+                gap: 8px;
             }
         }
     </style>
@@ -160,58 +129,60 @@
         </header>
 
         <div class="card">
-            <h2 class="card-title">대회 정보</h2>
+            <h2 class="section-title">대회 정보</h2>
             <div class="content">
-                <p>장소: 백곡저수지 & 금광저수지</p>
-                <p>일정: 총 6계임 (4월, 5월, 6월, 7월, 9월, 10월)</p>
-                <p>연회비: 15만원</p>
+                <p class="info-item">장소: 백곡저수지 & 금광저수지</p>
+                <p class="info-item">일정: 총 6계임 (4월, 5월, 6월, 7월, 9월, 10월)</p>
+                <p class="info-item">연회비: 15만원</p>
                 <p class="sub-text">※ 등록시 물품지급</p>
             </div>
         </div>
 
         <div class="card">
-            <h2 class="card-title">참가비</h2>
+            <h2 class="section-title">참가비</h2>
             <div class="content">
-                <p>렌탈보트 핸드가이드: 10만원</p>
-                <p>풋가이드: 12만원</p>
-                <p>카약&벨리: 6만원 통일</p>
-                <p class="sub-text">※ 단발성 참가팀은 참가비 1.5배 적용</p>
+                <p class="info-item">렌탈보트 핸드가이드: 10만원</p>
+                <p class="info-item">풋가이드: 12만원</p>
+                <p class="info-item">카약&벨리: 6만원 통일</p>
+                <p class="sub-text">※ 단발성 참가팀은 참가비 1.5배</p>
+            </div>
+        </div>
+
+        <div class="prize-section">
+            <div class="card">
+                <h2 class="section-title">상품 및 상패 (경기당)</h2>
+                <div class="content">
+                    <p class="prize-list">1등: 70만원 장비 or 상품 + 상패</p>
+                    <p class="prize-list">2등: 30만원 장비 or 상품 + 상패</p>
+                    <p class="prize-list">3등: 10만원 상품 or 상품권 + 상패</p>
+                    <p>4-5등: 5만원 상품 or 상품권</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">종합순위</h2>
+                <div class="content">
+                    <p class="prize-list">1등: 80만원 상당 + 트로피</p>
+                    <p class="prize-list">2등: 50만원 상당 + 상패</p>
+                    <p class="prize-list">3등: 30만원 상당 + 상패</p>
+                    <p class="prize-list">4-5등: 15만원 상당</p>
+                    <p>6-10등: 10만원 상당</p>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <h2 class="card-title">상품 및 상패 (경기당)</h2>
-            <div class="content prize-list">
-                <p>1등: 70만원 장비 or 상품 + 상패</p>
-                <p>2등: 30만원 장비 or 상품 + 상패</p>
-                <p>3등: 10만원 상품 or 상품권 + 상패</p>
-                <p>4-5등: 5만원 상품 or 상품권</p>
+            <h2 class="section-title">공지사항</h2>
+            <div class="content notice-list">
+                <p>라이브 스코프 금지 (이외 어탐은 사용 가능)</p>
+                <p>선수 등록은 1인 1보트로 하되 대회는 2인 1보트가 가능 (렌탈 보트 한정)</p>
+                <p>카약 & 벨리는 1마력 초과 동력 제한</p>
+                <p>풋가이드 신청은 매 게임 접수 시작부터 선착순으로 진행</p>
             </div>
-        </div>
-
-        <div class="card">
-            <h2 class="card-title">종합순위</h2>
-            <div class="content prize-list">
-                <p>1등: 80만원상당 상품권 or 상품 + 트로피</p>
-                <p>2등: 50만원상당 상품권 or 상품 + 상패</p>
-                <p>3등: 30만원상당 상품권 or 상품 + 상패</p>
-                <p>4등-5등: 15만원상당 상품권 or 상품</p>
-                <p>6등-10등: 10만원상당 상품권 or 상품</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="card-title">공지사항</h2>
-            <ul class="content notice-list">
-                <li>라이브 스코프 금지 (이외 어탐은 사용 가능)</li>
-                <li>선수 등록은 1인 1보트로 하되 대회는 2인 1보트가 가능 (렌탈 보트 한정)</li>
-                <li>카약 & 벨리는 1마력 초과 동력 제한</li>
-                <li>풋가이드 신청은 매 게임 접수 시작부터 선착순으로 진행</li>
-            </ul>
         </div>
 
         <div class="contact">
-            <h2 class="contact-title">문의사항</h2>
+            <h2 class="section-title">문의사항</h2>
             <p class="phone">010-9748-7880</p>
         </div>
     </div>
